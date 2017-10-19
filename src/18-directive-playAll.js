@@ -15,10 +15,7 @@ ngSoundManager.directive('playAll', ['angularPlayer', '$log',
                             angularPlayer.addTrack(scope.songs[i]);
                         }
                         
-                        if (attrs.play != 'false') {
-                            //play first song
-                            angularPlayer.play();
-                        }
+                        angularPlayer.playTrack(scope.songs[0].id);
                     });
                 });
             }
